@@ -20,7 +20,8 @@
                 },
                 link: function($scope, element) {
 
-                }
+                },
+                template: '<div>nanfeng</div>'
             };
         };
 

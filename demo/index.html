@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DEMO</title>
-</head>
-<body>
-    
-</body>
+<html lang="en" ng-app="demo">
+  <head>
+    <title>angular-theme-spinner demo</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" href="./libs/styles/railscasts.css"/>
+    <link rel="stylesheet" href="./bower/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./bower/Hover/css/hover-min.css"/>
+    <link rel="stylesheet" href="./bower/angular-motion/dist/angular-motion.min.css"/>
+    <link rel="stylesheet" href="./bower/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./demo.css"/>
+  </head>
+
+  <body ng-controller="ThemeController">
+
+    <div class="top-panel">
+        <div class="container">
+            <div class="top-panel-caption text-center">
+              <h1>angular-theme-spinner</h1>
+              <br/>
+              <p><font style="color: #fff;">angular-theme-spinner</font> offers you the easiest way of displaying spinner at specific area.</p>
+              <br/>
+              <p><a href="https://github.com/leftstick/angular-theme-spinner" class="hvr-glow" style="width: 70px; border-radius: 50%;"><i class="fa fa-github fa-5x"></i></a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-lg-4 text-center" ng-repeat="theme in themes1">
+          <div class="circle" style="width: 140px; height: 140px;"></div>
+          <h2>{{ theme.name }}</h2>
+          <div hljs source="theme.source"></div>
+          <p><a class="btn btn-default btn-lg" href="#" role="button">{{ theme.running ? 'Stop' : 'Run' }}</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-lg-4 text-center" ng-repeat="theme in themes2">
+          <div class="circle" style="width: 140px; height: 140px;"></div>
+          <h2>{{ theme.name }}</h2>
+          <div hljs source="theme.source"></div>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-8">
+          <h2>DECLARATIVE&nbsp;<span class="text-muted">What you see is what you get</span></h2>
+          <p class="lead">Use it just like native html element</p>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-offset-4 col-md-8">
+          <h2>THEMED&nbsp;<span class="text-muted">Multiple choice</span></h2>
+          <p class="lead">Six themes are available for using. <code>tailing</code>, <code>audio-wave</code>, <code>windcatcher</code>, <code>spinner-section</code>, <code>spinner-section-far</code>, <code>circular</code></p>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-8">
+          <h2>ADJUSTABLE&nbsp;<span class="text-muted">Size can be changed</span></h2>
+          <p class="lead">Three levels of size could be used in to adjust your app, <code>size-sm</code>, <code>size-md</code>, <code>size-lg</code></p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="" back-to-top>Back to top</a></p>
+        <p><a href="http://leftstick.github.io/">Blog</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <script type="text/javascript" src="./bower/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower/angular/angular.js"></script>
+    <script type="text/javascript" src="./libs/highlight.pack.js"></script>
+    <script type="text/javascript" src="./libs/angular-highlightjs.min.js"></script>
+    <script type="text/javascript" src="./bower/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="./bower/angular-strap/dist/angular-strap.min.js"></script>
+
+    <script src="./demo.js"></script>
+
+  </body>
 </html>

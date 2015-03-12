@@ -35,14 +35,35 @@
      return less('./', true);
  });
 
+ var copy = function(isProduction) {
+     var minify = require('html-minifier').minify;
+     var html = require('fs').readFileSync('src/angular-theme-spinner.html', {
+         encoding: 'utf8'
+     });
+     var minHtml = minify(html, {
+         removeComments: true,
+         removeCommentsFromCDATA: true,
+         collapseWhitespace: true
+     });
+
+     var template = require('gulp-template');
+     var rename = require('gulp-rename');
+     return gulp.src('src/angular-theme-spinner.js_vm')
+         .pipe(template({
+             template: minHtml
+         }))
+         .pipe(rename({
+             extname: '.js'
+         }))
+         .pipe(gulp.dest(isProduction ? 'dist/' : 'demo/'));
+ };
+
  gulp.task('copyDemo', function() {
-     return gulp.src('src/angular-theme-spinner.js')
-         .pipe(gulp.dest('demo/'));
+     return copy(false);
  });
 
  gulp.task('copyDist', function() {
-     return gulp.src('src/angular-theme-spinner.js')
-         .pipe(gulp.dest('dist'));
+     return copy(true);
  });
 
  gulp.task('demo', ['lessDemo', 'copyDemo'], function() {

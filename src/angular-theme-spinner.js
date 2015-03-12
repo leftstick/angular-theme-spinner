@@ -2,7 +2,7 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Mar 11th, 2015
+ * @date   Mar 12th, 2015
  *
  **/
 (function(angular, global) {
@@ -13,14 +13,12 @@
 
         var dir = function($timeout) {
             return {
-                restrict: 'A',
-                scope: {
-                    option: '=',
-                    data: '='
-                },
+                restrict: 'AE',
+                scope: {},
                 link: function($scope, element) {
 
-                }
+                },
+                template: '<%= template %>'
             };
         };
 

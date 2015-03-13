@@ -28,7 +28,7 @@ bower install --save angular-theme-spinner
 | display      | boolean([expression]) | YES       | used to display the spinner or not |
 | size         | string([expression])  | YES       | `size-sm`, `size-md`, `size-lg` can be used |
 
-See full featured demo: [splash-screen](http://leftstick.github.io/angular-theme-spinner/)
+See full featured demo: [angular-theme-spinner](http://leftstick.github.io/angular-theme-spinner/)
 
 ## LICENSE ##
 

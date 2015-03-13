@@ -8,11 +8,11 @@
     margin-top: 60px;
 }
 
-.circle{
-    background-color: red;
+.spinner-example{
     border-radius: 50%;
     border-width: 0;
     margin: auto;
+    position: relative;
 }
 pre {
   overflow: auto;

@@ -2,26 +2,60 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Mar 11th, 2015
+ * @date   Mar 13th, 2015
  *
  **/
 (function(angular, global) {
     'use strict';
 
-    var definition = function(d3) {
+    var definition = function() {
+
+        var sizes = ['size-sm', 'size-md', 'size-lg'];
+        var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular'];
 
 
         var dir = function($timeout) {
             return {
-                restrict: 'A',
+                restrict: 'AE',
                 scope: {
-                    option: '=',
-                    data: '='
+                    theme: '=',
+                    display: '=',
+                    size: '='
                 },
                 link: function($scope, element) {
+                    var $parent = element.parent();
+                    $scope.curTheme = undefined;
+                    $scope.curSize = undefined;
 
+                    var prepareClass = function() {
+                        $scope.thClasses = [$scope.curTheme, $scope.curSize];
+                    };
+
+                    $scope.$watch('display', function(newValue) {
+                        if (newValue) {
+                            return;
+                        }
+                    });
+
+                    $scope.$watch('size', function(newValue) {
+                        if (sizes.indexOf(newValue) > -1) {
+                            $scope.curSize = newValue;
+                        }else{
+                            $scope.curSize = sizes[1];
+                        }
+                        prepareClass();
+                    });
+
+                    $scope.$watch('theme', function(newValue) {
+                        if (themes.indexOf(newValue)>-1) {
+                            $scope.curTheme = newValue;
+                        }else{
+                            $scope.curTheme = themes[0];
+                        }
+                        prepareClass();
+                    });
                 },
-                template: '<div>nanfeng</div>'
+                template: '<div ng-if="display" class="spinner" ng-class="thClasses"><span ng-if="theme === \'tailing\'">{{ curSize !== \'size-sm\' ? \'Loading\' : \'\' }}</span><windcatcher ng-if="theme === \'windcatcher\'"><div class="blade"></div><div class="blade"></div><div class="blade"></div><div class="blade"></div><div class="blade"></div><div class="blade"></div><div class="blade"></div><div class="blade"></div></windcatcher><circular ng-if="theme === \'circular\'"><div class="spinner-layer spinner-blue"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div><div class="spinner-layer spinner-red"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div><div class="spinner-layer spinner-yellow"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div><div class="spinner-layer spinner-green"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></circular></div>'
             };
         };
 

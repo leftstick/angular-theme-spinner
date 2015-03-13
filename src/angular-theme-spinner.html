@@ -1,3 +1,61 @@
-<div>
-    nanfeng
+<div ng-if="display" class="spinner" ng-class="thClasses">
+    <span ng-if="theme === 'tailing'">{{ curSize !== 'size-sm' ? 'Loading' : '' }}</span>
+
+    <windcatcher ng-if="theme === 'windcatcher'">
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+        <div class="blade"></div>
+    </windcatcher>
+
+    <circular ng-if="theme === 'circular'">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </circular>
 </div>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./bower/Hover/css/hover-min.css"/>
     <link rel="stylesheet" href="./bower/angular-motion/dist/angular-motion.min.css"/>
     <link rel="stylesheet" href="./bower/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./angular-theme-spinner.min.css"/>
     <link rel="stylesheet" href="./demo.css"/>
   </head>
 
@@ -38,18 +39,31 @@
     <div class="container">
       <div class="row" style="margin-bottom: 20px;">
         <div class="col-lg-4 text-center" ng-repeat="theme in themes1">
-          <div class="circle" style="width: 140px; height: 140px;"></div>
+          <div class="spinner-example" style="width: 150px; height: 150px;">
+              <th-spinner theme="theme.name" display="theme.running" size="theme.size"></th-spinner>
+          </div>
           <h2>{{ theme.name }}</h2>
           <div hljs source="theme.source"></div>
-          <p><a class="btn btn-default btn-lg" href="#" role="button">{{ theme.running ? 'Stop' : 'Run' }}</a></p>
+          <div class="btn-group btn-group-justified btn-group-lg" role="group">
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-lg'}" role="button" ng-click="toggleSize(theme, 'size-lg', $event)">size-lg</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-md'}" role="button" ng-click="toggleSize(theme, 'size-md', $event)">size-md</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-sm'}" role="button" ng-click="toggleSize(theme, 'size-sm', $event)">size-sm</a>
+          </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
       <div class="row">
         <div class="col-lg-4 text-center" ng-repeat="theme in themes2">
-          <div class="circle" style="width: 140px; height: 140px;"></div>
+          <div class="spinner-example" style="width: 150px; height: 150px;">
+              <th-spinner theme="theme.name" display="theme.running" size="theme.size"></th-spinner>
+          </div>
           <h2>{{ theme.name }}</h2>
           <div hljs source="theme.source"></div>
+          <div class="btn-group btn-group-justified btn-group-lg" role="group">
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-lg'}" role="button" ng-click="toggleSize(theme, 'size-lg', $event)">size-lg</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-md'}" role="button" ng-click="toggleSize(theme, 'size-md', $event)">size-md</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-sm'}" role="button" ng-click="toggleSize(theme, 'size-sm', $event)">size-sm</a>
+          </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -102,6 +116,7 @@
     <script type="text/javascript" src="./libs/angular-highlightjs.min.js"></script>
     <script type="text/javascript" src="./bower/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="./bower/angular-strap/dist/angular-strap.min.js"></script>
+    <script type="text/javascript" src="./angular-theme-spinner.js"></script>
 
     <script src="./demo.js"></script>
 

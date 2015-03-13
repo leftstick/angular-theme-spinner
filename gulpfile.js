@@ -10,9 +10,7 @@
      });
 
      var LessPluginCleanCSS = require('less-plugin-clean-css');
-     var cleancss = new LessPluginCleanCSS({
-         advanced: true
-     });
+     var cleancss = new LessPluginCleanCSS();
 
      var sourcemaps = require('gulp-sourcemaps');
      var rename = require('gulp-rename');
@@ -50,7 +48,7 @@
      var rename = require('gulp-rename');
      return gulp.src('src/angular-theme-spinner.js_vm')
          .pipe(template({
-             template: minHtml
+             template: minHtml.replace(/\'/g, '\\\'')
          }))
          .pipe(rename({
              extname: '.js'

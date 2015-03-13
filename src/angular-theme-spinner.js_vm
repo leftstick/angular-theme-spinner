@@ -32,8 +32,15 @@
                     };
 
                     $scope.$watch('display', function(newValue) {
-                        if (newValue) {
+                        var children = element.children();
+                        if(children.length === 0){
                             return;
+                        }
+                        var $spinner = angular.element(children[0]);
+                        if (newValue) {
+                            $spinner.show();
+                        }else{
+                            $spinner.hide();
                         }
                     });
 

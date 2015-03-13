@@ -2,7 +2,7 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Mar 12th, 2015
+ * @date   Mar 13th, 2015
  *
  **/
 (function(angular, global) {
@@ -32,8 +32,15 @@
                     };
 
                     $scope.$watch('display', function(newValue) {
-                        if (newValue) {
+                        var children = element.children();
+                        if(children.length === 0){
                             return;
+                        }
+                        var $spinner = angular.element(children[0]);
+                        if (newValue) {
+                            $spinner.show();
+                        }else{
+                            $spinner.hide();
                         }
                     });
 

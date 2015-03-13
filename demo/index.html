@@ -31,6 +31,7 @@
               <p><font style="color: #fff;">angular-theme-spinner</font> offers you the easiest way of displaying spinner at specific area.</p>
               <br/>
               <p><a href="https://github.com/leftstick/angular-theme-spinner" class="hvr-glow" style="width: 70px; border-radius: 50%;"><i class="fa fa-github fa-5x"></i></a></p>
+              <p>v1.0.0</p>
             </div>
         </div>
     </div>
@@ -48,6 +49,7 @@
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-lg'}" role="button" ng-click="toggleSize(theme, 'size-lg', $event)">size-lg</a>
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-md'}" role="button" ng-click="toggleSize(theme, 'size-md', $event)">size-md</a>
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-sm'}" role="button" ng-click="toggleSize(theme, 'size-sm', $event)">size-sm</a>
+            <a class="btn btn-default" role="button" ng-click="toggleDisplay(theme, $event)">{{ theme.running ? 'STOP' : 'RUN' }}</a>
           </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -63,6 +65,7 @@
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-lg'}" role="button" ng-click="toggleSize(theme, 'size-lg', $event)">size-lg</a>
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-md'}" role="button" ng-click="toggleSize(theme, 'size-md', $event)">size-md</a>
             <a class="btn btn-info" ng-class="{active: theme.size === 'size-sm'}" role="button" ng-click="toggleSize(theme, 'size-sm', $event)">size-sm</a>
+            <a class="btn btn-default" role="button" ng-click="toggleDisplay(theme, $event)">{{ theme.running ? 'STOP' : 'RUN' }}</a>
           </div>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->

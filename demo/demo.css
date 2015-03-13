@@ -14,10 +14,6 @@
     margin: auto;
     position: relative;
 }
-pre {
-  overflow: auto;
-  background: #23241f;
-}
 
 pre code{
     white-space: nowrap;

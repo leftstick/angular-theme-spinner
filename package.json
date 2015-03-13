@@ -1,6 +1,6 @@
 {
   "name": "angular-theme-spinner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "angular-theme-spinner used to tell people the data is loading",
   "repository": {
     "type": "git",

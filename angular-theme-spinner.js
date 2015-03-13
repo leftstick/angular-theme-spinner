@@ -39,8 +39,10 @@
                         var $spinner = angular.element(children[0]);
                         if (newValue) {
                             $spinner.show();
+                            element.show();
                         }else{
                             $spinner.hide();
+                            element.hide();
                         }
                     });
 

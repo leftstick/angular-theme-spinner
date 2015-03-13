@@ -1,0 +1,21 @@
+.top-panel{
+    height: 400px;
+    width: 100%;
+    background-color: #ee6e73;
+    margin-bottom: 20px;
+}
+.top-panel-caption{
+    margin-top: 60px;
+}
+
+.spinner-example{
+    border-radius: 50%;
+    border-width: 0;
+    margin: auto;
+    position: relative;
+}
+
+pre code{
+    white-space: nowrap;
+    min-height: 50px;
+}

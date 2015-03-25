@@ -1,4 +1,4 @@
-# angular-theme-spinner ![](http://img.shields.io/badge/bower_module-v1.0.2-green.svg) #
+# angular-theme-spinner ![](http://img.shields.io/badge/bower_module-v1.1.0-green.svg) #
 =============
 
 angular-theme-spinner is used for displaying loading indicator while data in specific area is loading.
@@ -24,7 +24,7 @@ bower install --save angular-theme-spinner
 
 | Attribute    | Type                  | Required  | Description |
 | :------------| :---------------------| :---------| :-----------|
-| theme        | string([expression])  | YES       | `tailing`, `audio-wave`, `windcatcher`, `spinner-section`, `spinner-section-far`, `circular` can be used |
+| theme        | string([expression])  | YES       | `tailing`, `audio-wave`, `windcatcher`, `spinner-section`, `spinner-section-far`, `circular`, `initspin` can be used |
 | display      | boolean([expression]) | YES       | used to display the spinner or not |
 | size         | string([expression])  | YES       | `size-sm`, `size-md`, `size-lg` can be used |
 

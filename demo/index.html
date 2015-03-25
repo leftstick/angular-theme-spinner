@@ -70,13 +70,29 @@
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
+      <div class="row">
+        <div class="col-lg-4 text-center" ng-repeat="theme in themes3">
+          <div class="spinner-example" style="width: 150px; height: 150px;">
+              <th-spinner theme="theme.name" display="theme.running" size="theme.size"></th-spinner>
+          </div>
+          <h2>{{ theme.name }}</h2>
+          <div hljs source="theme.source"></div>
+          <div class="btn-group btn-group-justified btn-group-lg" role="group">
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-lg'}" role="button" ng-click="toggleSize(theme, 'size-lg', $event)">size-lg</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-md'}" role="button" ng-click="toggleSize(theme, 'size-md', $event)">size-md</a>
+            <a class="btn btn-info" ng-class="{active: theme.size === 'size-sm'}" role="button" ng-click="toggleSize(theme, 'size-sm', $event)">size-sm</a>
+            <a class="btn btn-default" role="button" ng-click="toggleDisplay(theme, $event)">{{ theme.running ? 'STOP' : 'RUN' }}</a>
+          </div>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
 
       <!-- START THE FEATURETTES -->
 
       <hr/>
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
           <h2>DECLARATIVE&nbsp;<span class="text-muted">What you see is what you get</span></h2>
           <p class="lead">Use it just like native html element</p>
         </div>
@@ -87,14 +103,14 @@
       <div class="row">
         <div class="col-md-offset-4 col-md-8">
           <h2>THEMED&nbsp;<span class="text-muted">Multiple choice</span></h2>
-          <p class="lead">Six themes are available for using. <code>tailing</code>, <code>audio-wave</code>, <code>windcatcher</code>, <code>spinner-section</code>, <code>spinner-section-far</code>, <code>circular</code></p>
+          <p class="lead">Six themes are available for using. <code>tailing</code>, <code>audio-wave</code>, <code>windcatcher</code>, <code>spinner-section</code>, <code>spinner-section-far</code>, <code>circular</code>, <code>initspin</code></p>
         </div>
       </div>
 
       <hr/>
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
           <h2>ADJUSTABLE&nbsp;<span class="text-muted">Size can be changed</span></h2>
           <p class="lead">Three levels of size could be used in to adjust your app, <code>size-sm</code>, <code>size-md</code>, <code>size-lg</code></p>
         </div>

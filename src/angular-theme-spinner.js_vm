@@ -2,7 +2,8 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Mar 13th, 2015
+ * @date   Mar 25th, 2015
+ * @version 1.1.0
  *
  **/
 (function(angular, global) {
@@ -11,7 +12,7 @@
     var definition = function() {
 
         var sizes = ['size-sm', 'size-md', 'size-lg'];
-        var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular'];
+        var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular', 'initspin'];
 
 
         var dir = function($timeout) {

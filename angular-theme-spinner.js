@@ -11,7 +11,7 @@
     var definition = function() {
 
         var sizes = ['size-sm', 'size-md', 'size-lg'];
-        var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular'];
+        var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular', 'initspin'];
 
 
         var dir = function($timeout) {

@@ -68,6 +68,13 @@
                 running: true
             }];
 
+            $scope.themes3 = [{
+                name: 'initspin',
+                source: '<th-spinner theme="\'initspin\'" display="\'true\'" size="\'size-md\'"></th-spinner>',
+                size: 'size-md',
+                running: true
+            }];
+
 
 
             $scope.toggleSize = function(theme, size, $event) {
@@ -81,7 +88,7 @@
                 theme.running = !theme.running;
                 theme.source = '<th-spinner theme="\'' + theme.name + '\'" display="\'' + theme.running + '\'" size="\'' + theme.size + '\'"></th-spinner>';
                 $event.preventDefault();
-                $event.stopPropagation();  
+                $event.stopPropagation();
             };
 
         }

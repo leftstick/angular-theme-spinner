@@ -1,4 +1,4 @@
-# angular-theme-spinner ![](http://img.shields.io/badge/bower_module-v1.1.0-green.svg) #
+# angular-theme-spinner ![](http://img.shields.io/badge/bower_module-v1.2.0-green.svg) #
 =============
 
 angular-theme-spinner is used for displaying loading indicator while data in specific area is loading.

@@ -1,5 +1,8 @@
-# angular-theme-spinner ![](http://img.shields.io/badge/bower_module-v1.2.0-green.svg) #
+# angular-theme-spinner #
 =============
+
+[![NPM version][npm-image]][npm-url]
+![](http://img.shields.io/badge/bower_module-v1.2.0-green.svg)
 
 angular-theme-spinner is used for displaying loading indicator while data in specific area is loading.
 
@@ -36,3 +39,5 @@ See full featured demo: [angular-theme-spinner](http://leftstick.github.io/angul
 
 
 [expression]: https://docs.angularjs.org/guide/expression
+[npm-url]: https://npmjs.org/package/angular-theme-spinner
+[npm-image]: https://badge.fury.io/js/angular-theme-spinner.png

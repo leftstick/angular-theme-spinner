@@ -2,7 +2,7 @@
 =============
 
 [![NPM version][npm-image]][npm-url]
-![](http://img.shields.io/badge/bower_module-v1.2.0-green.svg)
+![](http://img.shields.io/badge/bower_module-v1.2.1-green.svg)
 
 angular-theme-spinner is used for displaying loading indicator while data in specific area is loading.
 

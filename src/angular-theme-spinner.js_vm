@@ -2,8 +2,8 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Mar 25th, 2015
- * @version 1.1.0
+ * @date   Sep 14th, 2015
+ * @version 1.2.1
  *
  **/
 (function(angular, global) {
@@ -39,11 +39,11 @@
                         }
                         var $spinner = angular.element(children[0]);
                         if (newValue) {
-                            $spinner.show();
-                            element.show();
-                        }else{
-                            $spinner.hide();
-                            element.hide();
+                            $spinner.css('display', 'block');
+                            element.css('display', 'block');
+                        } else {
+                            $spinner.css('display', 'none');
+                            element.css('display', 'none');
                         }
                     });
 

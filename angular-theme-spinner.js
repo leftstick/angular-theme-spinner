@@ -2,14 +2,14 @@
  * angular-theme-spinner give a handy loading indicator
  *
  * @author Howard.Zuo
- * @date   Sep 14th, 2015
- * @version 1.2.1
+ * @date   Oct 22th, 2015
+ * @version 1.2.3
  *
  **/
-(function(angular, global) {
+(function(global) {
     'use strict';
 
-    var definition = function() {
+    var definition = function(angular) {
 
         var sizes = ['size-sm', 'size-md', 'size-lg'];
         var themes = ['tailing', 'audio-wave', 'windcatcher', 'spinner-section', 'spinner-section-far', 'circular', 'initspin'];
@@ -75,11 +75,11 @@
     };
 
     if (typeof exports === 'object') {
-        module.exports = definition();
+        module.exports = definition(require('angular'));
     } else if (typeof define === 'function' && define.amd) {
-        define([], definition);
+        define(['angular'], definition);
     } else {
-        definition();
+        definition(global.angular);
     }
 
-}(angular, window));
+}(window));

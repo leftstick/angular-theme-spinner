@@ -1,6 +1,6 @@
 {
   "name": "angular-theme-spinner",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "./index.js",
   "description": "angular-theme-spinner used to tell people the data is loading",
   "repository": {
@@ -23,10 +23,10 @@
     "gulp-less": "^3.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-template": "^3.0.0",
-    "gulp-uglify": "^1.4.1",
+    "gulp-uglify": "^1.4.2",
     "gulp-webserver": "^0.9.1",
-    "html-minifier": "^0.7.2",
-    "less-plugin-autoprefix": "^1.4.2",
+    "html-minifier": "^0.8.0",
+    "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1"
   }
 }

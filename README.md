@@ -2,7 +2,7 @@
 =============
 
 [![NPM version][npm-image]][npm-url]
-![](http://img.shields.io/badge/bower_module-v1.2.2-green.svg)
+![](http://img.shields.io/badge/bower_module-v1.2.3-green.svg)
 
 angular-theme-spinner is used for displaying loading indicator while data in specific area is loading.
 
@@ -17,10 +17,29 @@ bower install --save angular-theme-spinner
 
 ```html
 <link rel="stylesheet" type="text/css" href="angular-theme-spinner.min.css">
+
+<script type="text/javascript" src="angular.min.js"></script>
 <script type="text/javascript" src="angular-theme-spinner.min.js"></script>
+
 <div style="width: 500px; height: 500px;">
     <th-spinner theme="'tailing'" display="'true'" size="'size-md'"></th-spinner>
 </div>
+```
+
+```javascript
+//plain javascript
+var mod = angular.module('yourModule', ['angular-theme-spinner']);
+
+//commonjs
+var angular = require('angular');
+require('angular-theme-spinner');
+var mod = angular.module('yourModule', ['angular-theme-spinner']);
+
+//AMD
+define(['angular', 'angular-theme-spinner'], function(angular){
+    var mod = angular.module('yourModule', ['angular-theme-spinner']);
+});
+//If you are using requirejs, please notice that you have the path config that specify `angular-theme-spinner` to the javascript file
 ```
 
 ## API ##

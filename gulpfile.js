@@ -57,7 +57,7 @@ gulp.task('copyDist', function() {
     return copy(true);
 });
 
-gulp.task('demo', ['lessDemo', 'copyDemo'], function() {
+gulp.task('dev', ['lessDemo', 'copyDemo'], function() {
     var webserver = require('gulp-webserver');
     gulp.src('demo/')
         .pipe(webserver({
